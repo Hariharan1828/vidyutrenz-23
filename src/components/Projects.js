@@ -121,19 +121,19 @@ export const Projects = () => {
       imgUrl: iot,
     },
     {
-      title: "SMASHZONE",
-      description: "Badminton",
-      imgUrl: batminton,
+      title: "NETWORKING AND CYBERSECURITY",
+      description: "Networking & Cybersecurity workshop",
+      imgUrl: nw,
     },
     {
-      title: "FUTSAL",
-      description: "Football",
-      imgUrl: football,
+      title: "BASICS OF MACHINE LEARNING AND MEDICAL IMAGING",
+      description: "Machine Learning and Medical Imaging Workshop",
+      imgUrl: ml,
     },
     {
-      title: "VOLLEY",
-      description: "VolleyBall",
-      imgUrl: volley,
+      title: "MAKE YOUR PCB",
+      description: "design, prototype printed circuit boards (PCBs).",
+      imgUrl: pcb,
     },
   ];
 
@@ -160,18 +160,23 @@ export const Projects = () => {
                   <Tab.Container id="projects-tabs" defaultActiveKey="first">
                     <Nav
                       variant="pills"
-                      className="nav-pills mb-5 justify-content-center align-items-center"
+                      className=" justify-content-center align-items-center flex-nowrap "
                       id="pills-tab"
                     >
                       <Nav.Item>
-                        <Nav.Link eventKey="first">TECHNICAL</Nav.Link>
+                        <Nav.Link eventKey="first" className="border-0 a">TECHNICAL</Nav.Link>
                       </Nav.Item>
                       <Nav.Item>
-                        <Nav.Link eventKey="second">NON-TECHNICAL</Nav.Link>
+                        <Nav.Link eventKey="second" className="border-0 a">NON-TECH</Nav.Link>
                       </Nav.Item>
                       <Nav.Item>
-                        <Nav.Link eventKey="third">WORKSHOP</Nav.Link>
+                        <Nav.Link eventKey="third" className="border-0 a">WORKSHOP</Nav.Link>
                       </Nav.Item>
+                      <Nav.Item>
+                        <Nav.Link eventKey="fourth" className="border-0 a">OUTDOOR</Nav.Link>
+                      </Nav.Item>
+                      
+
                     </Nav>
                     <Tab.Content
                       id="slideInUp"
@@ -182,6 +187,27 @@ export const Projects = () => {
                       <Tab.Pane eventKey="first">
                         <Row>
                           {projects.map((project, index) => {
+                            return <ProjectCard key={index} {...project} />;
+                          })}
+                        </Row>
+                      </Tab.Pane>
+                      <Tab.Pane eventKey="second">
+                        <Row>
+                          {nonTechs.map((project, index) => {
+                            return <ProjectCard key={index} {...project} />;
+                          })}
+                        </Row>
+                      </Tab.Pane>
+                      <Tab.Pane eventKey="third">
+                        <Row>
+                          {workshops.map((project, index) => {
+                            return <ProjectCard key={index} {...project} />;
+                          })}
+                        </Row>
+                      </Tab.Pane>
+                      <Tab.Pane eventKey="fourth">
+                        <Row>
+                          {outdoors.map((project, index) => {
                             return <ProjectCard key={index} {...project} />;
                           })}
                         </Row>

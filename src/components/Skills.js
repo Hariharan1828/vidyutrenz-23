@@ -3,10 +3,10 @@
 // import meter3 from "../assets/img/meter3.svg";
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
-import tech from "../assets/img/TECH-EVENTS.png"
-import nontech from "../assets/img/non-tech.png"
-import workshop from "../assets/img/workshops.png"
-import outdoor from "../assets/img/outdoor.png"
+import tech from "../assets/img/TECH-EVENTS.jpeg"
+import nontech from "../assets/img/non-tech.jpeg"
+import workshop from "../assets/img/workshops.jpeg"
+import outdoor from "../assets/img/outdoor.jpeg"
 
 
 // import arrow1 from "../assets/img/arrow1.svg";
